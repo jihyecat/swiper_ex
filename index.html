@@ -5,12 +5,35 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-		<link rel="stylesheet" href="css.style.css" />
+		<link rel="stylesheet" href="css/style.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 		/>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	</head>
-	<body></body>
+	<body>
+		<main>
+			<section class="swiper-wrapper">
+				<article class="swiper-slide">1</article>
+				<article class="swiper-slide">2</article>
+				<article class="swiper-slide">3</article>
+				<article class="swiper-slide">4</article>
+				<article class="swiper-slide">5</article>
+			</section>
+		</main>
+
+		<script>
+			//기본 swiper 연결법
+			const swiper = new Swiper("main", {
+				speed: 500, //swipe시 패널이 넘어가는 속도
+				loop: true, //swipe를 순환
+				direction: "horizontal", //swiper방향 horizontal 가로 vertical 세로
+				grabCursor: true,
+				slidesPerView: 2, //한 화면 안에 보이는 슬라이드 갯수 "auto"는 100%, 특정 크기를 지정
+				spaceBetween: 30, //패널 사이 간격 px단위
+				centeredSlides: true, //활성화 패널을 항상 가운데로 배치
+			});
+		</script>
+	</body>
 </html>
